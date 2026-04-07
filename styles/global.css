@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-/* 
- font-family: "Sora", sans-serif;
- font-family: "Roboto Mono", monospace;
- font-family: "Roboto Flex", sans-serif;
-*/
 :root {
   /* Content */
   --content-primary: #FFFFFF;
@@ -29,5 +24,27 @@
   --accent-blue: #91A1FA;
   --accent-green: #77C0AF;
   --accent-lime: #D1DC97;
-  --accent-red: #E9A9B3
+  --accent-red: #E9A9B3;
+
+  --ff-sora: "Sora", sans-serif;
+  --display-large: 800 5.5rem/1.3 var(--ff-sora);
+  --display-medium: 800 2.5rem/1.3 var(--ff-sora);
+  --display-small: 700 2rem/1.3 var(--ff-sora);
+
+  --ff-mono: "Roboto Mono", monospace;
+  --overline: 700 1rem/1.5 var(--ff-mono);
+
+  --ff-flex: "Roboto Flex", sans-serif;
+  --paragraph-large: 100 1rem/1.5 var(--ff-flex);
+  --paragraph-medium: 100 0.875rem/1.5 var(--ff-flex);
+  --paragraph-small: 100 0.75rem/1.5 var(--ff-flex);
+  --label-medium: 100 1.25rem/1.5 var(--ff-flex);
+  --label-small: 100 1rem/1.5 var(--ff-flex);
+}
+
+body {
+  background-color: var(--background-primary);
+  background-image: url('../assets/Shapes.png');
+  background-repeat: no-repeat;
+  background-size:  50% 100%;
 }
