@@ -14,6 +14,59 @@
 
 </head>
 <body>
+  <main>
+    <div class="container">
+      <header>
+        <img src="assets/logo.svg" alt="Logo">
+        <p>Online - gratuito</p>
+        <h1>Sorteador de números</h1>
+      </header>
+      <div class="draw">
+        <h2>Quero sortear:</h2>
+        <p>
+          Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!
+        </p>
+        <form>
+          <div class="inputs">
+            <div class="input">
+              <label for="number">números</label>
+              <input type="number" name="number" id="number" required>
+            </div>
+            <div class="input">
+              <label for="number">de</label>
+              <input type="number" name="number" id="number" riquired>
+            </div>
+            <div class="input">
+              <label for="number">até</label>
+              <input type="number" name="number" id="number" required>
+            </div>
+          </div>
+          <div class="field-group">
+            <div class="switch-container">
+              <input type="checkbox" id="repeat number" class="switch-input">
+              <label for="repeat number" class="switch-label"></label>
+              <span class="label-text">Não repetir número</span>
+            </div>
+          </div>
+          <button>Sortear</button>
+        </form>
+      
+      </div>
+      <div class="info">
+        <p class="info-title">
+          <img src="assets/icons/info.svg" alt="Info">
+          Como funciona o sorteador de números?
+        </p>
+        O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.
+        <p class="info-title">
+          <img src="assets/icons/info.svg" alt="Info">
+          Posso escolher o intervalo dos números?
+        </p>
+        Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.
+      </div>
+    </div>
+  </main>
+  
   <script src="script.js"></script>
 </body>
 </html>
