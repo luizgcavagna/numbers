@@ -72,6 +72,23 @@ main {
   } 
 }
 
+.logo {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+
+@media (width > 1100px) {
+  .logo {
+    text-align: left;
+    margin-bottom: 5.5625rem;
+
+    & img {
+      margin-left: -0.875rem;
+    }
+  }
+}
+
 header {
   & p {
     background-image: linear-gradient(90deg, #C7C9CC 0%, #3D3D3D 100%);
@@ -81,5 +98,25 @@ header {
     color: transparent; /* Fallback */
     font: var(--overline);
     text-transform: uppercase;
+    margin-bottom: .5rem;
+  }
+
+  & h1 {
+    color: var(--content-primary);
+    font: var(--display-medium);
+    margin-bottom: 2.625rem;
+    text-transform: uppercase;
+  }
+}
+.draw {
+  & h2 {
+    color: var(--content-primary);
+    font: var(--label-medium);
+    text-transform: uppercase;
+  }
+
+  & p {
+    color: var(--content-tertiary);
+    font: var(--paragraph-medium);
   }
 }
