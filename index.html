@@ -10,7 +10,7 @@
   <title>Numbers</title>
 
   <link rel="stylesheet" href="styles/index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto+Mono:ital,wght@0,700;1,700&family=Sora&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto+Mono:ital,wght@0,700;1,700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -35,22 +35,25 @@
               <input type="number" name="number" id="number" required>
             </div>
             <div class="input">
-              <label for="number">de</label>
-              <input type="number" name="number" id="number" riquired>
+              <label for="of">de</label>
+              <input type="number" name="of" id="of" riquired>
             </div>
             <div class="input">
-              <label for="number">até</label>
-              <input type="number" name="number" id="number" required>
+              <label for="to">até</label>
+              <input type="number" name="to" id="to" required>
             </div>
           </div>
-          <div class="field-group">
-            <div class="switch-container">
-              <input type="checkbox" id="repeat number" class="switch-input">
-              <label for="repeat number" class="switch-label"></label>
-              <span class="label-text">Não repetir número</span>
-            </div>
+          <div class="flex">
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider"></span>
+            </label> 
+            <label class="label-text">Não repetir número</label> 
           </div>
-          <button>Sortear</button>
+          <button>
+            Sortear 
+            <img src="assets/icons/arrow.svg" alt="Arrow">
+          </button>
         </form>
       
       </div>
@@ -59,12 +62,12 @@
           <img src="assets/icons/info.svg" alt="Info">
           Como funciona o sorteador de números?
         </p>
-        O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.
+        <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
         <p class="info-title">
           <img src="assets/icons/info.svg" alt="Info">
           Posso escolher o intervalo dos números?
         </p>
-        Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.
+        <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
       </div>
     </div>
   </main>

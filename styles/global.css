@@ -27,7 +27,7 @@
   --accent-red: #E9A9B3;
 
   --ff-sora: "Sora", sans-serif;
-  --display-large: 800 5.5rem/1.3 var(--ff-sora);
+  --display-large: 800 4rem/1.3 var(--ff-sora);
   --display-medium: 800 2.5rem/1.3 var(--ff-sora);
   --display-small: 700 2rem/1.3 var(--ff-sora);
 
@@ -69,6 +69,15 @@ main {
     padding: 0;
     width: 1098px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "logo logo" 
+    "header result"
+    "info result"
+    ;
+    align-items: center;
+    column-gap: 6.75rem;
   } 
 }
 
@@ -80,6 +89,7 @@ main {
 
 @media (width > 1100px) {
   .logo {
+    grid-area: logo;
     text-align: left;
     margin-bottom: 5.5625rem;
 
@@ -108,6 +118,18 @@ header {
     text-transform: uppercase;
   }
 }
+
+@media (width > 1100px) {
+  header {
+    grid-area: header;
+    & h1 {
+      font: var(--display-large);
+      margin-bottom: 2.375rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
 .draw {
   & h2 {
     color: var(--content-primary);
@@ -118,5 +140,157 @@ header {
   & p {
     color: var(--content-tertiary);
     font: var(--paragraph-medium);
+    margin-bottom: 2.5rem;
+  }
+
+  & .inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+
+    & label {
+      display: block;
+      margin-bottom: .5rem;
+      text-align: center;
+      font: var(--label-medium);
+      color: var(--content-secondary);
+      text-transform: uppercase;
+    }
+
+    & input[type="number"]::-webkit-inner-spin-button,
+    & input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    & input[type="number"] {
+      -moz-appearance: textfield; /* Firefox */
+    }
+
+    & input[type="number"] {
+      -webkit-appearance: none; 
+      -moz-appearance: none;    
+      appearance: none;   
+
+      border: none;
+      background: transparent;
+      outline: none;
+
+      width: 86px;
+      height: 56px;
+      padding: 0.25rem .5rem;
+      background-color: var(--background-secondary);
+      border-radius: .5rem;
+      font: var(--display-small);
+      text-align: center;
+      color: var(--content-primary);
+    }
+  }
+
+  & .label-text {
+    color: var(--content-primary);
+    font: var(--paragraph-medium);
+  }
+
+  & .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+    
+  }
+
+  /* Esconde o checkbox padrão do navegador */
+  & .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* O fundo do switch (o trilho) */
+  & .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Cor quando desativado */
+    transition: .4s;
+    border-radius: 34px;
+  }
+
+  /* A bolinha branca */
+  & .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+  /* Quando o checkbox está marcado (Checked) */
+  & input:checked + .slider {
+    /* Usei um degradê para chegar próximo da sua imagem */
+    background: linear-gradient(90deg, #cf91ff, #82aaff);
+  }
+
+  /* Move a bolinha para a direita quando marcado */
+  & input:checked + .slider:before {
+    transform: translateX(22px);
+  }
+
+  .flex{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  & button {
+    width: 100%;
+    background-color: var(--background-tertiary);
+    padding-block: 1rem;
+    text-align: center;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font: var(--label-medium);
+    color: var(--content-primary);
+    gap: .5rem;
+    cursor: pointer;
+    margin-bottom: 4.9375rem;
+  }
+}
+
+@media(width > 1100px){
+  .draw {
+    & .inputs {
+      justify-content: left;
+    }
+  }
+}
+
+.info {
+  & p.info-title {
+    color: var(--content-brand);
+    font: var(--paragraph-medium);
+  }
+
+  & p {
+    color: var(--content-secondary);
+    font: var(--paragraph-small);
+  }
+
+  & p:nth-child(2) {
+    margin-bottom: 2.25rem;
   }
 }
