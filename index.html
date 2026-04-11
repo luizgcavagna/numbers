@@ -24,38 +24,56 @@
         <h1>Sorteador de números</h1>
       </header>
       <div class="draw">
-        <h2>Quero sortear:</h2>
-        <p>
-          Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!
-        </p>
-        <form>
-          <div class="inputs">
-            <div class="input">
-              <label for="number">números</label>
-              <input type="number" name="number" id="number" required>
+        <div class="form display-none">
+          <h2>Quero sortear:</h2>
+          <p>
+            Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!
+          </p>
+          <form>
+            <div class="inputs">
+              <div class="input">
+                <label for="number">números</label>
+                <input type="number" name="number" id="number" required>
+              </div>
+              <div class="input">
+                <label for="of">de</label>
+                <input type="number" name="of" id="of" riquired>
+              </div>
+              <div class="input">
+                <label for="to">até</label>
+                <input type="number" name="to" id="to" required>
+              </div>
             </div>
-            <div class="input">
-              <label for="of">de</label>
-              <input type="number" name="of" id="of" riquired>
+            <div class="flex">
+              <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+              </label> 
+              <label class="label-text">Não repetir número</label> 
             </div>
-            <div class="input">
-              <label for="to">até</label>
-              <input type="number" name="to" id="to" required>
+            <button>
+              Sortear 
+              <img src="assets/icons/arrow.svg" alt="Arrow">
+            </button>
+          </form>
+        </div>
+       
+        <div class="results">
+          <h2>Resultado do sorteio</h2>
+          <p>1º resultado</p>
+          <div class="result">
+            <div class="item">
+              23
             </div>
-          </div>
-          <div class="flex">
-            <label class="switch">
-              <input type="checkbox" checked>
-              <span class="slider"></span>
-            </label> 
-            <label class="label-text">Não repetir número</label> 
+            <div class="item">
+              12
+            </div>
           </div>
           <button>
-            Sortear 
-            <img src="assets/icons/arrow.svg" alt="Arrow">
-          </button>
-        </form>
-      
+              Sortear Novamente
+              <img src="assets/icons/play.svg" alt="Arrow">
+            </button>
+        </div>
       </div>
       <div class="info">
         <p class="info-title">

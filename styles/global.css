@@ -33,13 +33,14 @@
 
   --ff-mono: "Roboto Mono", monospace;
   --overline: 700 1rem/1.5 var(--ff-mono);
+  --result: 700 3rem/1.5 var(--ff-mono);
 
   --ff-flex: "Roboto Flex", sans-serif;
-  --paragraph-large: 100 1rem/1.5 var(--ff-flex);
-  --paragraph-medium: 100 0.875rem/1.5 var(--ff-flex);
-  --paragraph-small: 100 0.75rem/1.5 var(--ff-flex);
-  --label-medium: 100 1.25rem/1.5 var(--ff-flex);
-  --label-small: 100 1rem/1.5 var(--ff-flex);
+  --paragraph-large: 400 1rem/1.5 var(--ff-flex);
+  --paragraph-medium: 400 0.875rem/1.5 var(--ff-flex);
+  --paragraph-small: 400 0.75rem/1.5 var(--ff-flex);
+  --label-medium: 800 1.25rem/1.5 var(--ff-flex);
+  --label-small: 800 1rem/1.5 var(--ff-flex);
 }
 
 body {
@@ -122,6 +123,7 @@ header {
 @media (width > 1100px) {
   header {
     grid-area: header;
+    align-self: start;
     & h1 {
       font: var(--display-large);
       margin-bottom: 2.375rem;
@@ -269,12 +271,50 @@ header {
     cursor: pointer;
     margin-bottom: 4.9375rem;
   }
+
+  & .results {
+    & h2{
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    & p {
+      font: var(--overline);
+      color: var(--content-secondary);
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+    }
+
+    & .result {
+      display: flex;
+      gap: 1.625rem;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+
+      & .item {
+        font: var(--result);
+        color: var(--content-brand);
+      }
+    }
+  }
+}
+
+.display-none {
+  display: none;
 }
 
 @media(width > 1100px){
   .draw {
+    grid-area: result;
+
     & .inputs {
       justify-content: left;
+    }
+
+    & button {
+      margin-bottom: 0;
     }
   }
 }
@@ -292,5 +332,12 @@ header {
 
   & p:nth-child(2) {
     margin-bottom: 2.25rem;
+  }
+}
+
+@media(width > 1100px){ 
+  .info {
+    grid-area: info;
+    align-self: start;
   }
 }
