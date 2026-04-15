@@ -24,7 +24,7 @@
         <h1>Sorteador de números</h1>
       </header>
       <div class="draw">
-        <div class="form display-none">
+        <div class="form">
           <h2>Quero sortear:</h2>
           <p>
             Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!
@@ -37,7 +37,7 @@
               </div>
               <div class="input">
                 <label for="of">de</label>
-                <input type="number" name="of" id="of" riquired>
+                <input type="number" name="of" id="of" required>
               </div>
               <div class="input">
                 <label for="to">até</label>
@@ -58,7 +58,7 @@
           </form>
         </div>
        
-        <div class="results">
+        <div id="results" class="results display-none">
           <h2>Resultado do sorteio</h2>
           <p>1º resultado</p>
           <div class="result">
