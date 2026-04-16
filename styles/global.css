@@ -302,6 +302,7 @@ header {
     & .result {
       display: flex;
       gap: 1.625rem;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       margin-bottom: 2.5rem;
