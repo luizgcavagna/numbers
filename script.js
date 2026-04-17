@@ -20,6 +20,9 @@ form.onsubmit = (event) => {
   if(min > max)
     return alert("De tem que ser menor do que até!")
 
+  if(((max - min) + 1) < quantity)
+    return alert("Quantidade tem que ser menor que a quantidade de opções.")
+
   const results = draw(quantity, min, max);
 
   createItem(results);
@@ -54,13 +57,15 @@ function draw(quantity, min, max){
 
     const result = mathRandom(min, max);
 
-    if(Boolean(checkbox.value) === true && !results.includes(result)) 
+    if(Boolean(checkbox.value) === true && !results.includes(result)) {
       results.push(result);
+      quantity--;
+    }
       
-    else if(Boolean(checkbox.value) === false) 
+    else if(Boolean(checkbox.value) === false) {
       results.push(result);
-  
-    quantity--;
+      quantity--;
+    }
   }
 
   return results;
